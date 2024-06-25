@@ -78,10 +78,10 @@ const encodeBase64 = (filePath) => {
 const generateInvoice = (req, res) => {
   const invoiceData = req.body;
 
-  const templatePath = path.join(__dirname, 'InvoiceTemplate.html');
-  const logoPath = path.join(__dirname, 'assets', 'logo.png');
-  const signaturePath = path.join(__dirname, 'assets', 'signature.png');
-  const cssPath = path.join(__dirname, 'InvoiceTemplate.css');
+  const templatePath = path.join(__dirname, '..', 'InvoiceTemplate.html');
+  const logoPath = path.join(__dirname, '..', 'assets', 'logo.png');
+  const signaturePath = path.join(__dirname, '..', 'assets', 'signature.png');
+  const cssPath = path.join(__dirname, '..', 'InvoiceTemplate.css');
 
   // Debugging paths
   console.log('Template Path:', templatePath);
