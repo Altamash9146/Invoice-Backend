@@ -84,7 +84,7 @@ const generateInvoice = (req, res) => {
   fs.readFile(templatePath, 'utf8', (err, template) => {
     if (err) {
       console.log(err);
-      return res.status(500).send('Error reading template');
+      return res.status(500).send('Error reading template',err);
     }
 
     // Inject CSS into the template
