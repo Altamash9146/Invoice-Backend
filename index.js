@@ -7,8 +7,11 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin:"*"
-}))
+  origin: '*',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+}));
 
 const generateInvoice = require("./Routes/generateInvoiceRoutes");
 app.use("/api", generateInvoice);
