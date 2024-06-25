@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Invoice</title>
+    <link rel="stylesheet" href="./InvoiceTemplate.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+          <img src="{{logoBase64}}" alt="Logo">
+          <h1>amazon.in</h1>
+        </div>
+        <table class="details" style="float: right;">
+          <tr>
+            <td>
+              <strong>Sold By:</strong><br>
+              {{sellerName}}<br>
+              {{sellerAddress}}<br>
+              {{sellerCity}}<br>
+              PAN No: {{sellerPAN}}<br>
+              GST Registration No: {{sellerGST}}
+            </td>
+            <td style="text-align: right;">
+              <strong>Billing Address:</strong><br>
+              {{billingName}}<br>
+              {{billingAddress}}<br>
+              {{billingCity}}
+          <br/>
+          <br/>
+              <strong>Shipping Address:</strong><br>
+              {{shippingName}}<br>
+              {{shippingAddress}}<br>
+              {{shippingCity}}
+            </td>
+          </tr>
+        </table>
+        <table class="details">
+          <tr>
+            <td>Order Number: {{orderNumber}}</td>
+            <td>Order Date: {{orderDate}}</td>
+          </tr>
+          <tr>
+            <td>Invoice Number: {{invoiceNumber}}</td>
+            <td>Invoice Date: {{invoiceDate}}</td>
+          </tr>
+        </table>
+        <table class="items">
+          <tr>
+            <th>Description</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+          {{#items}}
+          <tr>
+            <td>{{description}}</td>
+            <td>{{unitPrice}}</td>
+            <td>{{quantity}}</td>
+            <td>{{total}}</td>
+          </tr>
+          {{/items}}
+        </table>
+        <div class="footer">
+          <strong>Amount in Words:</strong> {{amountInWords}}<br><br>
+          <div style="float: right;">
+            <img src="{{signatureBase64}}" alt="Signature" style="width: 100px;"><br>
+          For {{sellerName}}<br>
+          Authorized Signatory
+          </div>
+        </div>
+      </div>
+</body>
+</html>

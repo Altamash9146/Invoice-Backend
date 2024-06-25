@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 50px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header img {
+  width: 80px;
+  margin-right: 20px;
+}
+.header h1 {
+  font-size: 20px;
+  margin: 0;
+}
+.details,
+.items,
+.footer {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.details td,
+.items td,
+.footer td {
+  padding: 5px;
+  vertical-align: top;
+}
+.details {
+  border-collapse: collapse;
+}
+.items {
+  border-collapse: collapse;
+  width: 100%;
+}
+.items th,
+.items td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.items th {
+  background-color: #f4f4f4;
+}
+.footer {
+  margin-top: 20px;
+}
